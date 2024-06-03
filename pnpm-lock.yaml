@@ -68,6 +68,9 @@ importers:
       compression:
         specifier: ^1.7.4
         version: 1.7.4
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
       drizzle-orm:
         specifier: ^0.31.0
         version: 0.31.0(@libsql/client@0.6.2)
@@ -80,6 +83,9 @@ importers:
       rxjs:
         specifier: ^7.8.1
         version: 7.8.1
+      s:
+        specifier: ^1.0.0
+        version: 1.0.0
     devDependencies:
       '@automock/adapters.nestjs':
         specifier: ^2.1.0
@@ -4345,6 +4351,10 @@ packages:
 
   rxjs@7.8.1:
     resolution: {integrity: sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==}
+
+  s@1.0.0:
+    resolution: {integrity: sha512-Tz63UXhdEBvvIV6Q0a+AV2Dx1TPq+vVWNYBxyCT9TG0uqn9kySwFTjfq3C1YuGBRwYtt9Tof11L6GCKi88foqw==}
+    engines: {node: '>=0.8'}
 
   safe-array-concat@1.1.2:
     resolution: {integrity: sha512-vj6RsCsWBCf19jIeHEfkRMw8DPiBb+DMXklQ/1SGDHOMlHdPUkZXFQ2YdplS23zESTijAcurb1aSgJA3AgMu1Q==}
@@ -9827,6 +9837,8 @@ snapshots:
   rxjs@7.8.1:
     dependencies:
       tslib: 2.6.2
+
+  s@1.0.0: {}
 
   safe-array-concat@1.1.2:
     dependencies:
