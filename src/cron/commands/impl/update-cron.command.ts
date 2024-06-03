@@ -1,4 +1,4 @@
-import { CreateCronDto } from "../dto/create-cron.dto";
+import { CreateCronDto } from "../../dto/create-cron.dto";
 
 export class UpdateCronCommand {
     constructor(
