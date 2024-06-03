@@ -27,7 +27,7 @@ export class CronController {
         @Param('name')
         name: string,
     ): Promise<Cron> {
-        return this.cronService.find(name);
+        return this.cronService.findOne(name);
     }
 
     @Post(':name')
