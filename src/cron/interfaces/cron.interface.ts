@@ -3,5 +3,5 @@ export interface Cron {
     webhook: string;
     apiKey: string;
     schedule: string;
-    startDate: Date;
+    startDate: number;
 }

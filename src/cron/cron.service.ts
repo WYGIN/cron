@@ -9,11 +9,25 @@ export class CronService {
   constructor(@InjectModel(Cron.name) private cronModel: Model<Cron>) {}
 
   async create(createCronDto: CreateCronDto): Promise<Cron> {
-    const createdCat = new this.cronModel(createCronDto);
-    return createdCat.save();
+    const createdCron = new this.cronModel(createCronDto);
+    return createdCron.save();
+  }
+
+  async find(name: string): Promise<Cron> {
+    return this.cronModel.findOne({name: name}).exec()
   }
 
   async findAll(): Promise<Cron[]> {
     return this.cronModel.find().exec();
+  }
+
+  async update(payload: CreateCronDto): Promise<Cron> {
+    const updateCron = this.cronModel.findOneAndUpdate({name: payload.name}, {$set: payload}).exec()
+    return updateCron
+  }
+
+  async delete(name: string): Promise<boolean> {
+    const deleteCron = this.cronModel.deleteOne({ name: name }).exec()
+    return (await deleteCron).acknowledged
   }
 }
